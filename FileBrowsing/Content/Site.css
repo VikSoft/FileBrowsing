@@ -1,0 +1,49 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+/* Own stylesheet */
+.dir-list>.dir-item {
+    display: block;
+    cursor: pointer;
+    text-decoration: underline;
+    
+}
+.dir-list>.dir-item:hover {
+    font-weight: bold;
+    background-color: #dddddd;
+}
+
+.dir-item.dir {
+    color: #3fa9f5;
+}
+
+.dir-item.file {
+    color: #3fa500;
+}
+
+th, tr {
+    text-align: center;
+}
+
+.table thead > tr > th {
+    background-color: #dddddd;
+}
+
+.table thead > tr > th, .table tbody > tr > th, .table tfoot > tr > th, .table thead > tr > td, .table tbody > tr > td, .table tfoot > tr > td {
+    border: 2px solid #dddddd;
+}
