@@ -1,0 +1,29 @@
+﻿<div class="row" ng-app="dirApp" ng-controller="dirCtrl" ng-cloak>
+    <div class="col-md-12">
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Less 10Mb</th>
+                <th>10Mb-50Mb</th>
+                <th>100Mb</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-hide="Drives">
+                <td>{{ sizes.Small }}<span ng-hide="sizes.Done">+</span></td>
+                <td>{{ sizes.Medium }}<span ng-hide="sizes.Done">+</span></td>
+                <td>{{ sizes.Large }}<span ng-hide="sizes.Done">+</span></td>
+            </tr>
+            <tr ng-show="Drives">
+                <td colspan="3">Select the disk</td>
+            </tr>
+            </tbody>
+        </table>
+        <p>
+            <strong>Current path: </strong> {{ current }}
+        </p>
+        <div class="dir-list">
+            <div class="dir-item" ng-repeat="item in items" ng-click="go($index)" ng-class="{ 'dir': item.IsDir, 'file': !item.IsDir }">{{ item.Name }}</div>
+        </div>
+    </div>
+</div>
